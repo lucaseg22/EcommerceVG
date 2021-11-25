@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./../../public/stylesheets/home.css" type="text/css">
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Victoria commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tienda" tabindex="-1">Tienda</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" name="q" {{#if q}}value="{{q}}"{{/if}} placeholder="Victoria commerce" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" id='buscador'>Buscar</button>
+        </form>
+        <p class="bienvenida"> Hola {{usuario}}! </p> <a href='/admin/login/logout' style="background-color: #fc5151;" class="btn btn-danger">Cerrar Sesion</a> 
+      </div>
+    </div>
+  </nav>
+
+
+
+
+    <h1>Listado de producutos</h1>
+
+    <a href='/admin/home/agregar' type="button" class="btn btn-success">+ Agregar</a>
+
+    <div>
+        <table class="table">
+  <thead>
+    <tr>
+      <th class="col-1">#</th>
+      <th class="col-8">Titulo</th>
+      <th class="col-1">Imagen</th>
+      <th class="col-1">Precio</th>
+      <th class="col-1">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      {{#each productos}}
+    <tr>
+      <th scope="row">{{id}} </th>
+      <td> {{titulo}} </td>
+      <td>{{{imagen}}}</td>
+      <td> {{precio}} </td>
+      <td><a href="/admin/home/modificar/{{id}}" class="btn btn-secondary" id="modificar" ><i class="fas fa-pencil-alt"></i></a></td>
+      <td><a href="/admin/home/eliminar/{{id}}" onclick="return confirm ('Estás seguro que deseas eliminar el registro?');" class="btn btn-secondary" id="eliminar"><i class="fas fa-trash"></i></a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+
+
+</body>
+
+</html>

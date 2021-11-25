@@ -1,0 +1,44 @@
+
+*{font-family: 'lobster';}
+
+body{background-color: #b2ff65;}
+
+h1{
+    margin: center;
+    padding: 10px;
+}
+
+nav{ 
+    width: 100%;
+    font-family: "lobster";
+    color: white; 
+}
+
+p {
+    padding-right: 10px;
+}
+.btn, .btn-success{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+td{
+    margin: 0;
+    padding: 0;
+}
+
+#eliminar{
+    background-color: #fc5151;
+}
+
+#modificar{
+    background-color: rgb(47, 223, 47);
+}
+i {
+    color: black ;
+}
+
+.bienvenida{
+    margin-left: 5px
+}
+

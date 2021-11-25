@@ -1,0 +1,43 @@
+
+*{font-family: 'lobster';}
+
+body{background-color: #b2ff65;}
+
+h1{
+
+    margin-left: 45%;
+    margin-top: 10vh;
+    
+
+}
+
+.formulario{ 
+        padding: 4px;
+        margin-top: 50px;
+        margin-left: 30%;
+        height: 45vh;
+        width: 100vh;
+        border: 2px solid black;
+        border-radius: 2%;
+        background-color: #44cf19;
+        font-size: 20px;
+}
+.form-control{
+    background-color: white;
+}
+
+nav{ width: 100%;
+    font-family: "lobster";
+    color: darkgreen;
+}
+
+.row{
+    border: 50px, solid, black;
+}
+
+#boton{
+    background-color: #44cf19;
+    border: 2px solid black;
+    border-radius: 5%;
+    color: black;
+}

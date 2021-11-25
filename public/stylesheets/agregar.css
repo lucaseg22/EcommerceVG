@@ -1,0 +1,48 @@
+*{
+    font-family: 'lobster';
+   
+}
+
+h1{
+    text-align: center;
+    margin-top: 5px;
+}
+
+body{
+    background-color:#b2ff65;
+    
+}
+
+form{
+    display: block;
+    width: 100vh;
+    height: 150vh;
+    padding: 10px;
+    margin-left: 25vw;
+}
+
+.form__titulo, .form__subtitulo, .form__descripcion, .form__precio{
+    font-family: 'calibri';
+    display: flex;
+    margin: 10px;
+    
+}
+
+textarea{
+    margin: 10px;
+}
+
+.form__titulo-input, .form__precio-input{
+    margin-left: 40px;
+}
+
+.form__subtitulo-input {
+    margin-left: 20px;
+}
+
+.guardar{
+    border-radius: 50px;
+    background-color: #ffa74f;
+    border-color: black;
+    border-style: solid;
+}

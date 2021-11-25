@@ -1,0 +1,45 @@
+body{
+    background-color: #b2ff65;
+    font-family: 'lobster';
+}
+
+h1{
+    margin: 10px;
+    text-align: center;
+}
+
+nav{ width: 100%;
+    font-family: "lobster";
+    color: darkgreen;
+ 
+}
+
+.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: flex-start;
+    
+    
+}
+
+.producto{
+    display: inline-flexbox;
+    border-radius:15px;
+    margin: 10px;
+    padding: 10px;
+    height: 450px;
+    width: 300px;
+    box-shadow: 10px 5px 5px rgb(128, 128, 128);
+    background-color: white;
+}
+
+.imagen{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo, .subtitulo, .cuerpo, .precio{
+    margin: 5px;
+}

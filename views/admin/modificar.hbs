@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/modificar.css">
+    
+    <title>Modificar</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Victoria commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tienda" tabindex="-1">Tienda</a>
+          </li>
+        </ul>
+        <p class="bienvenida"> Hola {{usuario}}! </p> <a href='/admin/login/logout' class="btn btn-danger">Cerrar Sesion</a> 
+      </div>
+    </div>
+  </nav>
+
+  <h1>Modificar productos</h1>
+
+<form action="/admin/home/modificar" method="post" enctype="multipart/form-data">
+
+    <div class="form__titulo">
+    <input type="hidden" name="id" value='{{productos.id}}'>
+
+    <label>Titulo</label>
+    <input class= "form__titulo-input" type="text" class="form-control" placeholder="Titulo" name='titulo' value= '{{productos.titulo}}'>
+</div>
+
+<div class="form__subtitulo">
+    <label>Subtitulo</label>
+  <input class= "form__subtitulo-input"  type="text" class="form-control" placeholder="Subtitulo" name='subtitulo' value='{{productos.subtitulo}}'>
+</div>
+
+<div class="form__precio">
+
+    <label>Precio</label>
+  <input class= "form__precio-input"  type="text" class="form-control" placeholder="Precio" name='precio' 
+  value='{{productos.precio}}'>
+</div>
+
+<div class="form__descripcion">
+  <label>Descripcion</label>
+  <textarea type='text' class="form-control" name="cuerpo">{{productos.cuerpo}}</textarea>
+</div>
+
+<div>
+  <label>Imagen: <input type="file" name="imagen" id="imagen"></label>
+  <label><input type="checkbox" name="img_delete" id="img_delete" value="1">Eliminar imagen actual?</label>
+  <input type="hidden" name="img_original"
+  value="{{productos.img_id}}">
+</div>
+<button class='guardar' type="submit">Guardar</button>
+</form>
+
+{{#if error}}
+<h5>{{message}}</h5>
+{{/if}}  
+
+</body>
+
+</html>
+
