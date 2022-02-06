@@ -10,5 +10,4 @@ var pool = mysql.createPool({
 });
 
 pool.query = util.promisify(pool.query);
-pool.catch (error)
 module.exports = pool;
